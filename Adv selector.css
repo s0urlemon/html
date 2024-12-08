@@ -1,0 +1,41 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(40, 26, 73);
+    color: azure;
+}
+h1{
+    color: rgb(234, 187, 223);
+}
+a{
+    color: rgb(246, 246, 169);
+}
+a:hover{
+    color: rgb(223, 148, 148);
+}
+ul>li{
+    font-weight: bold;
+}
+h1+p{
+    background-color: rgb(103, 15, 15);
+    padding: 10px;
+    border-radius: 5px;
+}
+ul li:hover{
+    color: rgb(149, 153, 199);
+}
+ul li:nth-child(3){
+    background-color: rgb(8, 73, 51);
+}
+p:not(:first-of-type){
+    text-decoration: underline;
+}
+ul li::before{
+    content:"\01F680";
+}
+a::after{
+    content: "\01F30C";
+}
+p::first-letter{
+    font-size: 200%;
+    color: rgb(136, 170, 204);
+}
