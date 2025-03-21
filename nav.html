@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Restaurant</title>
+    <style>
+        .nav{
+            background-color: rgb(7, 75, 37);
+        }
+        .nav a{
+            text-align: center;
+            color: aliceblue;
+            font-size:15px;
+        }
+        .nav a:hover{
+            background-color: aquamarine;
+            color: black;
+            font-size: 15px;
+            font-style: italic;
+        }
+        .nav a.active{
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a class="active" href="https://m.dominos.co.in/">Home</a>
+        <a href="https://www.dominos.co.in/menu">Menu</a>
+        <a href="https://www.dominos.co.in/menu/veg-pizzas">Veg</a>
+        <a href="https://www.dominos.co.in/menu/non-veg-pizzas">Non-Veg</a>
+    </div>
+    <section>
+        <img class="myslides"
+            src="https://media.istockphoto.com/id/183412466/photo/eastern-bluebirds-male-and-female.jpg?s=612x612&w=0&k=20&c=6_EQHnGedwdjM9QTUF2c1ce7cC3XtlxvMPpU5HAouhc="
+            style="height: auto;">
+        <img class="myslides" src="https://i.pinimg.com/736x/c8/19/a0/c819a0a767647449e168345a076146fd.jpg"
+            style="height: 700px;">
+        <img class="myslides" src="https://i.pinimg.com/736x/60/dc/ef/60dcefe33a0e2d8159236c5ed813cc97.jpg"
+            style="height: auto;">
+    </section>
+    <script>
+        var myIndex = 0;
+        carousel();
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("myslides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
+</body>
+</html>
